@@ -5,6 +5,7 @@ import { ExpandableReading } from '../components/content/ExpandableReading'
 import { KeyTakeaways } from '../components/content/KeyTakeaways'
 import { DecisionScenario } from '../components/content/DecisionScenario'
 import { QuizSection } from '../components/content/QuizSection'
+import { LogisticCurveExplorer } from '../components/widgets/LogisticCurveExplorer'
 
 export default function Ch3() {
   return (
@@ -60,6 +61,8 @@ export default function Ch3() {
         <MathBlock tex="e^{\beta_j}" /> is the factor by which the odds of <MathBlock tex="Y=1" />{' '}
         change for a one-unit increase in <MathBlock tex="x_j" />.
       </p>
+
+      <LogisticCurveExplorer />
 
       <ExpandableReading title="Deep Dive: Interpreting Odds Ratios">
         <p>

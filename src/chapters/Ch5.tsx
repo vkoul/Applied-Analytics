@@ -5,6 +5,7 @@ import { ExpandableReading } from '../components/content/ExpandableReading'
 import { KeyTakeaways } from '../components/content/KeyTakeaways'
 import { DecisionScenario } from '../components/content/DecisionScenario'
 import { QuizSection } from '../components/content/QuizSection'
+import { PoissonNBComparison } from '../components/widgets/PoissonNBComparison'
 
 export default function Ch5() {
   return (
@@ -108,6 +109,8 @@ export default function Ch5() {
         present. A formal test is the Cameron-Trivedi test, which regresses <MathBlock tex="(Y_i - \hat{\lambda}_i)^2 - Y_i" />{' '}
         on <MathBlock tex="\hat{\lambda}_i" /> and tests whether the slope is significantly different from zero.
       </p>
+
+      <PoissonNBComparison />
 
       <ExpandableReading title="Deep Dive: Why Ignoring Overdispersion is Dangerous">
         <p>

@@ -5,6 +5,7 @@ import { ExpandableReading } from '../components/content/ExpandableReading'
 import { KeyTakeaways } from '../components/content/KeyTakeaways'
 import { DecisionScenario } from '../components/content/DecisionScenario'
 import { QuizSection } from '../components/content/QuizSection'
+import { KMeansStepThrough } from '../components/widgets/KMeansStepThrough'
 
 export default function Ch9() {
   return (
@@ -94,6 +95,8 @@ export default function Ch9() {
         members of the nearest neighboring cluster. Values range from –1 to 1, where higher is better.
         We choose the <MathBlock tex="K" /> that maximizes the average silhouette score.
       </p>
+
+      <KMeansStepThrough />
 
       <ExpandableReading title="Deep Dive: K-Means++ Initialization">
         <p>

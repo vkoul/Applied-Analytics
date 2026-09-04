@@ -5,6 +5,7 @@ import { ExpandableReading } from '../components/content/ExpandableReading'
 import { KeyTakeaways } from '../components/content/KeyTakeaways'
 import { DecisionScenario } from '../components/content/DecisionScenario'
 import { QuizSection } from '../components/content/QuizSection'
+import { SurvivalCurveExplorer } from '../components/widgets/SurvivalCurveExplorer'
 
 export default function Ch6() {
   return (
@@ -111,6 +112,8 @@ export default function Ch6() {
         point in time" is exactly the <ConceptLink conceptId="proportional-hazards">proportional hazards</ConceptLink>{' '}
         assumption — the hazard ratio is constant over time.
       </p>
+
+      <SurvivalCurveExplorer />
 
       <ExpandableReading title="Deep Dive: Checking the Proportional Hazards Assumption">
         <p>

@@ -455,7 +455,7 @@ const concepts: Record<string, ConceptDefinition> = {
         <p>When p = 0.5, logit = 0. When p approaches 1, logit goes to +∞; when p approaches 0, logit goes to −∞. In logistic regression, the logit is modeled as a linear function of X, which is why logistic regression is also called the logit model. This transformation makes linear modeling possible for probability outcomes.</p>
       </div>
     ),
-    prerequisites: ['odds-ratio'],
+    prerequisites: [],
     chapterOrigin: 'ch3',
     category: 'binary',
   },
@@ -1236,6 +1236,22 @@ const concepts: Record<string, ConceptDefinition> = {
   },
 
   // ── Text Mining ─────────────────────────────────────────────
+
+  'naive-bayes': {
+    id: 'naive-bayes',
+    displayName: 'Naive Bayes Classifier',
+    shortDefinition: 'A probabilistic classifier based on Bayes\' theorem with a "naive" assumption of feature independence.',
+    content: (
+      <div className="space-y-2">
+        <p>Naive Bayes classifies observations by computing the posterior probability of each class given the features, then selecting the class with the highest probability. It applies Bayes' theorem:</p>
+        <MathBlock tex="P(C|X) = \frac{P(X|C) \cdot P(C)}{P(X)}" display />
+        <p>The "naive" assumption is that all features are conditionally independent given the class. While rarely true in practice, this simplification makes computation tractable and often works surprisingly well for text classification. With a bag-of-words representation, each word's probability is estimated independently, making Naive Bayes fast to train even on large vocabularies. It is a common baseline for sentiment analysis and spam detection.</p>
+      </div>
+    ),
+    prerequisites: ['bag-of-words', 'mle'],
+    chapterOrigin: 'ch10',
+    category: 'text',
+  },
 
   'tokenization': {
     id: 'tokenization',

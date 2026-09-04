@@ -102,6 +102,7 @@ export const conceptGraph: Record<string, ConceptNode> = {
   'centroid': { id: 'centroid', prerequisites: ['k-means'], chapterOrigin: 'ch9', category: 'clustering' },
 
   // Text mining
+  'naive-bayes': { id: 'naive-bayes', prerequisites: ['bag-of-words', 'mle'], chapterOrigin: 'ch10', category: 'text' },
   'tokenization': { id: 'tokenization', prerequisites: [], chapterOrigin: 'ch10', category: 'text' },
   'stemming': { id: 'stemming', prerequisites: ['tokenization'], chapterOrigin: 'ch10', category: 'text' },
   'lemmatization': { id: 'lemmatization', prerequisites: ['tokenization'], chapterOrigin: 'ch10', category: 'text' },

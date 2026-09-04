@@ -320,7 +320,7 @@ const concepts: Record<string, ConceptDefinition> = {
     content: (
       <div className="space-y-2">
         <p>Dummy variables encode categorical features as numbers. If a variable has K categories, you create K−1 dummies (the omitted category becomes the reference group). The coefficient on a dummy represents the average difference in Y between that category and the reference, holding other variables constant.</p>
-        <p>For example, with regions {North, South, West}, you create dummies for South and West. The intercept represents North, and the South coefficient shows how much higher (or lower) Y is in the South compared to the North. Including all K dummies causes perfect multicollinearity (the "dummy variable trap").</p>
+        <p>For example, with regions (North, South, West), you create dummies for South and West. The intercept represents North, and the South coefficient shows how much higher (or lower) Y is in the South compared to the North. Including all K dummies causes perfect multicollinearity (the &quot;dummy variable trap&quot;).</p>
       </div>
     ),
     prerequisites: ['ols'],

@@ -12,7 +12,7 @@ export function ConceptLink({ conceptId, children }: ConceptLinkProps) {
   const ref = useRef<HTMLSpanElement>(null)
   const [open, setOpen] = useState(false)
   const { chain, addToChain, removeFromChain, isInChain } = useTooltipChain()
-  const timerRef = useRef<ReturnType<typeof setTimeout>>()
+  const timerRef = useRef<ReturnType<typeof setTimeout>>(undefined)
 
   const concept = getConcept(conceptId)
 

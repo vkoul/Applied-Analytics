@@ -1,0 +1,70 @@
+export interface SearchEntry {
+  title: string
+  path: string
+  type: 'chapter' | 'concept' | 'formula' | 'resource'
+}
+
+export const searchIndex: SearchEntry[] = [
+  // Chapters
+  { title: 'Introduction to Analytics', path: '/ch1', type: 'chapter' },
+  { title: 'Linear Models & OLS Regression', path: '/ch2', type: 'chapter' },
+  { title: 'Binary Response Models', path: '/ch3', type: 'chapter' },
+  { title: 'Censored Data & Tobit Model', path: '/ch4', type: 'chapter' },
+  { title: 'Count Data Models', path: '/ch5', type: 'chapter' },
+  { title: 'Survival Analysis', path: '/ch6', type: 'chapter' },
+  { title: 'Discrete Choice Models', path: '/ch7', type: 'chapter' },
+  { title: 'Instrumental Variables', path: '/ch8', type: 'chapter' },
+  { title: 'Clustering Methods', path: '/ch9', type: 'chapter' },
+  { title: 'Text Mining & NLP', path: '/ch10', type: 'chapter' },
+  { title: 'Neural Networks', path: '/ch11', type: 'chapter' },
+  { title: 'Deep Learning', path: '/ch12', type: 'chapter' },
+
+  // Key concepts
+  { title: 'Ordinary Least Squares (OLS)', path: '/ch2', type: 'concept' },
+  { title: 'Maximum Likelihood Estimation (MLE)', path: '/ch3', type: 'concept' },
+  { title: 'Logistic Regression', path: '/ch3', type: 'concept' },
+  { title: 'Probit Model', path: '/ch3', type: 'concept' },
+  { title: 'ROC Curve', path: '/ch3', type: 'concept' },
+  { title: 'Confusion Matrix', path: '/ch3', type: 'concept' },
+  { title: 'Tobit Model', path: '/ch4', type: 'concept' },
+  { title: 'Censoring vs Truncation', path: '/ch4', type: 'concept' },
+  { title: 'Poisson Regression', path: '/ch5', type: 'concept' },
+  { title: 'Negative Binomial Model', path: '/ch5', type: 'concept' },
+  { title: 'Overdispersion', path: '/ch5', type: 'concept' },
+  { title: 'Zero-Inflated Models', path: '/ch5', type: 'concept' },
+  { title: 'Hazard Function', path: '/ch6', type: 'concept' },
+  { title: 'Kaplan-Meier Estimator', path: '/ch6', type: 'concept' },
+  { title: 'Cox Proportional Hazards', path: '/ch6', type: 'concept' },
+  { title: 'Multinomial Logit', path: '/ch7', type: 'concept' },
+  { title: 'Independence of Irrelevant Alternatives (IIA)', path: '/ch7', type: 'concept' },
+  { title: 'Nested Logit', path: '/ch7', type: 'concept' },
+  { title: 'Endogeneity', path: '/ch8', type: 'concept' },
+  { title: 'Two-Stage Least Squares (2SLS)', path: '/ch8', type: 'concept' },
+  { title: 'Hausman Test', path: '/ch8', type: 'concept' },
+  { title: 'K-Means Clustering', path: '/ch9', type: 'concept' },
+  { title: 'Hierarchical Clustering', path: '/ch9', type: 'concept' },
+  { title: 'Silhouette Score', path: '/ch9', type: 'concept' },
+  { title: 'TF-IDF', path: '/ch10', type: 'concept' },
+  { title: 'Bag of Words', path: '/ch10', type: 'concept' },
+  { title: 'Latent Dirichlet Allocation (LDA)', path: '/ch10', type: 'concept' },
+  { title: 'Sentiment Analysis', path: '/ch10', type: 'concept' },
+  { title: 'Perceptron', path: '/ch11', type: 'concept' },
+  { title: 'Backpropagation', path: '/ch11', type: 'concept' },
+  { title: 'Activation Functions', path: '/ch11', type: 'concept' },
+  { title: 'Convolutional Neural Network (CNN)', path: '/ch12', type: 'concept' },
+  { title: 'Recurrent Neural Network (RNN)', path: '/ch12', type: 'concept' },
+  { title: 'LSTM', path: '/ch12', type: 'concept' },
+  { title: 'Dropout Regularization', path: '/ch12', type: 'concept' },
+  { title: 'Heteroscedasticity', path: '/ch2', type: 'concept' },
+  { title: 'Multicollinearity', path: '/ch2', type: 'concept' },
+  { title: 'R-Squared', path: '/ch2', type: 'concept' },
+  { title: 'Adjusted R-Squared', path: '/ch2', type: 'concept' },
+  { title: 'AIC / BIC', path: '/ch2', type: 'concept' },
+
+  // Resources
+  { title: 'Glossary', path: '/glossary', type: 'resource' },
+  { title: 'Formula Sheet', path: '/formulas', type: 'resource' },
+  { title: 'Flashcards', path: '/flashcards', type: 'resource' },
+  { title: 'Case Studies', path: '/case-studies', type: 'resource' },
+  { title: 'Concept Map', path: '/map', type: 'resource' },
+]

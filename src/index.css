@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200; }
+  h1 { @apply text-2xl font-bold text-gray-900 dark:text-white; }
+  h2 { @apply text-xl font-semibold text-gray-800 dark:text-gray-100 mt-8 mb-3; }
+  h3 { @apply text-lg font-semibold text-gray-700 dark:text-gray-200 mt-6 mb-2; }
+}
+
+.concept-link {
+  @apply text-blue-600 dark:text-blue-400 underline decoration-dotted cursor-help;
+}
+.concept-link--in-chain {
+  @apply text-purple-600 dark:text-purple-400 underline decoration-solid;
+}

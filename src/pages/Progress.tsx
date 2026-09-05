@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, CartesianGrid, Tooltip, Cell } from 'recharts'
+import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, CartesianGrid, Tooltip } from 'recharts'
 import { quizData } from '../data/quizData'
 import { flashcardData } from '../data/flashcardData'
 

@@ -38,10 +38,12 @@ export function CensoringVisualizer() {
     const rng = seededRandom(123)
     const latent: number[] = []
     const observed: number[] = []
+    const xArr: number[] = []
 
     for (let i = 0; i < n; i++) {
       const x = rng() * 4 - 1
       const ystar = trueIntercept + trueBeta * x + boxMuller(rng) * 2
+      xArr.push(x)
       latent.push(ystar)
       observed.push(Math.max(censorPt, ystar))
     }
@@ -49,11 +51,6 @@ export function CensoringVisualizer() {
     const lh = buildHistogram(latent, -8, 16, 24)
     const oh = buildHistogram(observed, -8, 16, 24)
 
-    const xArr = Array.from({ length: n }, (_, i) => {
-      const rng2 = seededRandom(123)
-      for (let j = 0; j <= i; j++) rng2()
-      return rng2() * 4 - 1
-    })
     const xBar = xArr.reduce((s, v) => s + v, 0) / n
     const yBar = observed.reduce((s, v) => s + v, 0) / n
     let ssxy = 0, ssxx = 0

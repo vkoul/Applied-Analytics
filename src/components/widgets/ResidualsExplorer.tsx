@@ -91,13 +91,7 @@ export function ResidualsExplorer() {
               <YAxis dataKey="y" type="number" tick={{ fontSize: 10, fill: '#9ca3af' }} name="Y" />
               <Tooltip contentStyle={{ backgroundColor: '#1f2937', border: 'none', borderRadius: '8px', color: '#e5e7eb' }} />
               <Scatter data={scatter} fill="#3b82f6" fillOpacity={0.6} r={3} />
-              <ReferenceLine
-                segment={[
-                  { x: 0, y: beta0 },
-                  { x: 10, y: beta0 + beta1 * 10 },
-                ]}
-                stroke="#ef4444" strokeWidth={2}
-              />
+              <Scatter data={[{ x: 0, y: beta0 }, { x: 10, y: beta0 + beta1 * 10 }]} fill="none" line={{ stroke: '#ef4444', strokeWidth: 2 }} r={0} legendType="none" />
             </ScatterChart>
           </ResponsiveContainer>
         </div>

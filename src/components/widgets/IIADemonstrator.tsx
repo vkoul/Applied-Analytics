@@ -80,7 +80,7 @@ export function IIADemonstrator() {
           <CartesianGrid strokeDasharray="3 3" stroke="#374151" opacity={0.3} />
           <XAxis dataKey="name" tick={{ fontSize: 12, fill: '#9ca3af' }} />
           <YAxis domain={[0, 60]} tick={{ fontSize: 10, fill: '#9ca3af' }} label={{ value: 'Market Share (%)', angle: -90, position: 'insideLeft', fill: '#9ca3af', fontSize: 11 }} />
-          <Tooltip contentStyle={{ backgroundColor: '#1f2937', border: 'none', borderRadius: '8px', color: '#e5e7eb' }} formatter={(v: number) => `${v.toFixed(1)}%`} />
+          <Tooltip contentStyle={{ backgroundColor: '#1f2937', border: 'none', borderRadius: '8px', color: '#e5e7eb' }} formatter={(v: number | string) => `${Number(v).toFixed(1)}%`} />
           <Legend />
           <Bar dataKey="share" name="Share (%)" animationDuration={600}>
             {data.map((_, i) => (

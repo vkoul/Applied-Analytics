@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react'
-import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip, ReferenceLine } from 'recharts'
+import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from 'recharts'
 
 function seededRandom(seed: number) {
   let s = seed

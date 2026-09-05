@@ -63,6 +63,8 @@ The content is derived from publicly available course slide materials from the G
 
 This resource is provided "as is" for self-study and should not be considered a substitute for official course materials, lectures, or instruction. If you are an instructor or rights holder and have concerns about this project, please open an issue and it will be addressed promptly.
 
+**Content accuracy notice:** The textbook content, including chapter explanations, concept definitions, quiz questions, flashcards, code examples, and interactive widgets, was generated with AI assistance (Claude) based on the slide topics. While care was taken to ensure accuracy, **this content has not been reviewed by the course instructors and may contain errors, oversimplifications, or inaccuracies**. Always cross-reference with official course materials, textbooks, and your instructor's guidance. If you spot an error, please open an issue.
+
 **This is not an official Georgia Tech product.**
 
 ## License

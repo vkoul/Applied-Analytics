@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 
 const chapters = [
+  { path: '/intro', label: 'About This Textbook' },
   { path: '/ch1', label: 'Ch 1: Introduction' },
   { path: '/ch2', label: 'Ch 2: Linear Models' },
   { path: '/ch3', label: 'Ch 3: Binary Response' },

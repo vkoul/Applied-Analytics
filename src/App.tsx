@@ -3,6 +3,7 @@ import { lazy, Suspense } from 'react'
 import { TooltipProvider } from './components/tooltip/TooltipProvider'
 import { AppShell } from './components/layout/AppShell'
 
+const Intro = lazy(() => import('./chapters/Intro'))
 const Ch1 = lazy(() => import('./chapters/Ch1'))
 const Ch2 = lazy(() => import('./chapters/Ch2'))
 const Ch3 = lazy(() => import('./chapters/Ch3'))
@@ -29,7 +30,8 @@ function App() {
       <AppShell>
         <Suspense fallback={<div className="p-8 text-gray-400">Loading...</div>}>
           <Routes>
-            <Route path="/" element={<Navigate to="/ch1" replace />} />
+            <Route path="/" element={<Navigate to="/intro" replace />} />
+            <Route path="/intro" element={<Intro />} />
             <Route path="/ch1" element={<Ch1 />} />
             <Route path="/ch2" element={<Ch2 />} />
             <Route path="/ch3" element={<Ch3 />} />

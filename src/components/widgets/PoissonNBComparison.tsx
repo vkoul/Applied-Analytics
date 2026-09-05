@@ -18,13 +18,6 @@ function logGamma(z: number): number {
   return 0.5 * Math.log(2 * Math.PI) + (z + 0.5) * Math.log(t) - t + Math.log(x)
 }
 
-function factorial(n: number): number {
-  if (n <= 1) return 1
-  let r = 1
-  for (let i = 2; i <= n; i++) r *= i
-  return r
-}
-
 function poissonPMF(k: number, lambda: number): number {
   return Math.exp(-lambda + k * Math.log(lambda) - logGamma(k + 1))
 }

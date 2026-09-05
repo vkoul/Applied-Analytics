@@ -5,6 +5,9 @@ import { ExpandableReading } from '../components/content/ExpandableReading'
 import { KeyTakeaways } from '../components/content/KeyTakeaways'
 import { DecisionScenario } from '../components/content/DecisionScenario'
 import { QuizSection } from '../components/content/QuizSection'
+import { CodeBlock } from '../components/content/CodeBlock'
+import { codeExamples } from '../data/codeExamples'
+import { CNNFilterVisualizer } from '../components/widgets/CNNFilterVisualizer'
 
 export default function Ch12() {
   return (
@@ -140,6 +143,8 @@ export default function Ch12() {
         over long sequences. LSTMs can learn dependencies spanning hundreds of time steps.
       </p>
 
+      <CNNFilterVisualizer />
+
       <ExpandableReading title="Deep Dive: Why Additive Updates Solve Vanishing Gradients">
         <p>
           In a standard RNN, the hidden state is computed as{' '}
@@ -235,6 +240,9 @@ export default function Ch12() {
       ]} />
 
       {/* === Quiz === */}
+      <h2>Code Example</h2>
+      <CodeBlock python={codeExamples.ch12.python} r={codeExamples.ch12.r} title={codeExamples.ch12.title} />
+
       <QuizSection chapterId="ch12" />
     </ChapterLayout>
   )

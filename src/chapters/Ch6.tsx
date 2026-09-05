@@ -6,6 +6,8 @@ import { KeyTakeaways } from '../components/content/KeyTakeaways'
 import { DecisionScenario } from '../components/content/DecisionScenario'
 import { QuizSection } from '../components/content/QuizSection'
 import { SurvivalCurveExplorer } from '../components/widgets/SurvivalCurveExplorer'
+import { CodeBlock } from '../components/content/CodeBlock'
+import { codeExamples } from '../data/codeExamples'
 
 export default function Ch6() {
   return (
@@ -177,6 +179,9 @@ export default function Ch6() {
       ]} />
 
       {/* === Quiz === */}
+      <h2>Code Example</h2>
+      <CodeBlock python={codeExamples.ch6.python} r={codeExamples.ch6.r} title={codeExamples.ch6.title} />
+
       <QuizSection chapterId="ch6" />
     </ChapterLayout>
   )

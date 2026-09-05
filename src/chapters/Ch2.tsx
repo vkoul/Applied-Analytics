@@ -5,6 +5,9 @@ import { ExpandableReading } from '../components/content/ExpandableReading'
 import { KeyTakeaways } from '../components/content/KeyTakeaways'
 import { DecisionScenario } from '../components/content/DecisionScenario'
 import { QuizSection } from '../components/content/QuizSection'
+import { CodeBlock } from '../components/content/CodeBlock'
+import { codeExamples } from '../data/codeExamples'
+import { ResidualsExplorer } from '../components/widgets/ResidualsExplorer'
 
 export default function Ch2() {
   return (
@@ -65,6 +68,8 @@ export default function Ch2() {
         For hypothesis testing we additionally assume normality of errors:{' '}
         <MathBlock tex="\varepsilon \sim N(0, \sigma^2 I)" />.
       </p>
+
+      <ResidualsExplorer />
 
       <ExpandableReading title="Deep Dive: OLS as Maximum Likelihood">
         <p>
@@ -203,6 +208,9 @@ export default function Ch2() {
         "Multicollinearity inflates standard errors without biasing estimates — detect with VIF and address by removing or combining correlated variables.",
         "Log and polynomial transformations let you capture nonlinear relationships within the linear regression framework.",
       ]} />
+
+      <h2>Code Example</h2>
+      <CodeBlock python={codeExamples.ch2.python} r={codeExamples.ch2.r} title={codeExamples.ch2.title} />
 
       <QuizSection chapterId="ch2" />
     </ChapterLayout>

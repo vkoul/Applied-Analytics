@@ -5,6 +5,9 @@ import { ExpandableReading } from '../components/content/ExpandableReading'
 import { KeyTakeaways } from '../components/content/KeyTakeaways'
 import { DecisionScenario } from '../components/content/DecisionScenario'
 import { QuizSection } from '../components/content/QuizSection'
+import { CodeBlock } from '../components/content/CodeBlock'
+import { codeExamples } from '../data/codeExamples'
+import { NeuralNetPlayground } from '../components/widgets/NeuralNetPlayground'
 
 export default function Ch11() {
   return (
@@ -134,6 +137,8 @@ export default function Ch11() {
         optimizers like Adam adjust the learning rate per parameter.
       </p>
 
+      <NeuralNetPlayground />
+
       <ExpandableReading title="Deep Dive: The Chain Rule in Backpropagation">
         <p>
           Consider a simple two-layer network: input <MathBlock tex="x" />, hidden layer output{' '}
@@ -198,6 +203,9 @@ export default function Ch11() {
       ]} />
 
       {/* === Quiz === */}
+      <h2>Code Example</h2>
+      <CodeBlock python={codeExamples.ch11.python} r={codeExamples.ch11.r} title={codeExamples.ch11.title} />
+
       <QuizSection chapterId="ch11" />
     </ChapterLayout>
   )

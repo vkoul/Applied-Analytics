@@ -21,6 +21,7 @@ const Formulas = lazy(() => import('./pages/Formulas'))
 const Flashcards = lazy(() => import('./pages/Flashcards'))
 const CaseStudies = lazy(() => import('./pages/CaseStudies'))
 const ConceptMap = lazy(() => import('./pages/ConceptMap'))
+const Progress = lazy(() => import('./pages/Progress'))
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
             <Route path="/flashcards" element={<Flashcards />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/map" element={<ConceptMap />} />
+            <Route path="/progress" element={<Progress />} />
           </Routes>
         </Suspense>
       </AppShell>

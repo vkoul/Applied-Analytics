@@ -6,6 +6,8 @@ import { KeyTakeaways } from '../components/content/KeyTakeaways'
 import { DecisionScenario } from '../components/content/DecisionScenario'
 import { QuizSection } from '../components/content/QuizSection'
 import { PoissonNBComparison } from '../components/widgets/PoissonNBComparison'
+import { CodeBlock } from '../components/content/CodeBlock'
+import { codeExamples } from '../data/codeExamples'
 
 export default function Ch5() {
   return (
@@ -204,6 +206,9 @@ export default function Ch5() {
       ]} />
 
       {/* === Quiz === */}
+      <h2>Code Example</h2>
+      <CodeBlock python={codeExamples.ch5.python} r={codeExamples.ch5.r} title={codeExamples.ch5.title} />
+
       <QuizSection chapterId="ch5" />
     </ChapterLayout>
   )

@@ -5,6 +5,9 @@ import { ExpandableReading } from '../components/content/ExpandableReading'
 import { KeyTakeaways } from '../components/content/KeyTakeaways'
 import { DecisionScenario } from '../components/content/DecisionScenario'
 import { QuizSection } from '../components/content/QuizSection'
+import { CodeBlock } from '../components/content/CodeBlock'
+import { codeExamples } from '../data/codeExamples'
+import { TwoSLSVisualizer } from '../components/widgets/TwoSLSVisualizer'
 
 export default function Ch8() {
   return (
@@ -158,6 +161,8 @@ export default function Ch8() {
         ones, not absolute violations.
       </p>
 
+      <TwoSLSVisualizer />
+
       <ExpandableReading title="Deep Dive: Finding Good Instruments in Practice">
         <p>
           Finding valid instruments is the hardest part of IV analysis. Good instruments come from:
@@ -205,6 +210,9 @@ export default function Ch8() {
       ]} />
 
       {/* === Quiz === */}
+      <h2>Code Example</h2>
+      <CodeBlock python={codeExamples.ch8.python} r={codeExamples.ch8.r} title={codeExamples.ch8.title} />
+
       <QuizSection chapterId="ch8" />
     </ChapterLayout>
   )

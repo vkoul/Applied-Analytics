@@ -67,4 +67,5 @@ export const searchIndex: SearchEntry[] = [
   { title: 'Flashcards', path: '/flashcards', type: 'resource' },
   { title: 'Case Studies', path: '/case-studies', type: 'resource' },
   { title: 'Concept Map', path: '/map', type: 'resource' },
+  { title: 'Progress Tracker', path: '/progress', type: 'resource' },
 ]

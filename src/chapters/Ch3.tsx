@@ -6,6 +6,8 @@ import { KeyTakeaways } from '../components/content/KeyTakeaways'
 import { DecisionScenario } from '../components/content/DecisionScenario'
 import { QuizSection } from '../components/content/QuizSection'
 import { LogisticCurveExplorer } from '../components/widgets/LogisticCurveExplorer'
+import { CodeBlock } from '../components/content/CodeBlock'
+import { codeExamples } from '../data/codeExamples'
 
 export default function Ch3() {
   return (
@@ -203,6 +205,9 @@ export default function Ch3() {
         "Logit and probit produce very similar results; choose logit for odds ratio interpretation, probit for latent variable motivation.",
         "With imbalanced classes, accuracy is misleading — use the confusion matrix, precision, recall, F1, and AUC-ROC for evaluation.",
       ]} />
+
+      <h2>Code Example</h2>
+      <CodeBlock python={codeExamples.ch3.python} r={codeExamples.ch3.r} title={codeExamples.ch3.title} />
 
       <QuizSection chapterId="ch3" />
     </ChapterLayout>

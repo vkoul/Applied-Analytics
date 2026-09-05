@@ -5,6 +5,9 @@ import { ExpandableReading } from '../components/content/ExpandableReading'
 import { KeyTakeaways } from '../components/content/KeyTakeaways'
 import { DecisionScenario } from '../components/content/DecisionScenario'
 import { QuizSection } from '../components/content/QuizSection'
+import { CodeBlock } from '../components/content/CodeBlock'
+import { codeExamples } from '../data/codeExamples'
+import { AnalyticsModelChooser } from '../components/widgets/AnalyticsModelChooser'
 
 export default function Ch1() {
   return (
@@ -102,6 +105,8 @@ export default function Ch1() {
         </table>
       </div>
 
+      <AnalyticsModelChooser />
+
       <ExpandableReading title="Deep Dive: The Generalized Linear Model Framework">
         <p>
           Many of the models in this course are special cases of the <ConceptLink conceptId="generalized-linear-model">Generalized Linear Model (GLM)</ConceptLink> framework.
@@ -133,6 +138,13 @@ export default function Ch1() {
         "Most models in this course are special cases of the GLM framework, sharing the same estimation logic (MLE) but with different distributional assumptions.",
         "Understanding your data structure (cross-sectional, time series, panel) is the first step before choosing a model.",
       ]} />
+
+      <h2>Code Example</h2>
+      <CodeBlock
+        python={codeExamples.ch1.python}
+        r={codeExamples.ch1.r}
+        title={codeExamples.ch1.title}
+      />
 
       <QuizSection chapterId="ch1" />
     </ChapterLayout>

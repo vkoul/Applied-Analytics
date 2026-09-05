@@ -5,6 +5,9 @@ import { ExpandableReading } from '../components/content/ExpandableReading'
 import { KeyTakeaways } from '../components/content/KeyTakeaways'
 import { DecisionScenario } from '../components/content/DecisionScenario'
 import { QuizSection } from '../components/content/QuizSection'
+import { CodeBlock } from '../components/content/CodeBlock'
+import { codeExamples } from '../data/codeExamples'
+import { IIADemonstrator } from '../components/widgets/IIADemonstrator'
 
 export default function Ch7() {
   return (
@@ -103,6 +106,8 @@ export default function Ch7() {
         When <MathBlock tex="\sigma_k = 1" /> for all nests, the model collapses back to MNL.
       </p>
 
+      <IIADemonstrator />
+
       <ExpandableReading title="Deep Dive: Mixed Logit — The Most Flexible Model">
         <p>
           The <ConceptLink conceptId="mixed-logit">mixed logit</ConceptLink> (also called random coefficients logit)
@@ -174,6 +179,9 @@ export default function Ch7() {
       ]} />
 
       {/* === Quiz === */}
+      <h2>Code Example</h2>
+      <CodeBlock python={codeExamples.ch7.python} r={codeExamples.ch7.r} title={codeExamples.ch7.title} />
+
       <QuizSection chapterId="ch7" />
     </ChapterLayout>
   )

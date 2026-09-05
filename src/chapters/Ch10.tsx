@@ -5,6 +5,9 @@ import { ExpandableReading } from '../components/content/ExpandableReading'
 import { KeyTakeaways } from '../components/content/KeyTakeaways'
 import { DecisionScenario } from '../components/content/DecisionScenario'
 import { QuizSection } from '../components/content/QuizSection'
+import { CodeBlock } from '../components/content/CodeBlock'
+import { codeExamples } from '../data/codeExamples'
+import { TFIDFExplorer } from '../components/widgets/TFIDFExplorer'
 
 export default function Ch10() {
   return (
@@ -112,6 +115,8 @@ export default function Ch10() {
         corpus receive high TF-IDF scores, signaling that they are <em>distinctive</em> for that
         document.
       </p>
+
+      <TFIDFExplorer />
 
       <ExpandableReading title="Deep Dive: Why the Log in IDF?">
         <p>
@@ -223,6 +228,9 @@ export default function Ch10() {
       ]} />
 
       {/* === Quiz === */}
+      <h2>Code Example</h2>
+      <CodeBlock python={codeExamples.ch10.python} r={codeExamples.ch10.r} title={codeExamples.ch10.title} />
+
       <QuizSection chapterId="ch10" />
     </ChapterLayout>
   )

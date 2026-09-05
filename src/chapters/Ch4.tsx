@@ -5,6 +5,9 @@ import { ExpandableReading } from '../components/content/ExpandableReading'
 import { KeyTakeaways } from '../components/content/KeyTakeaways'
 import { DecisionScenario } from '../components/content/DecisionScenario'
 import { QuizSection } from '../components/content/QuizSection'
+import { CodeBlock } from '../components/content/CodeBlock'
+import { codeExamples } from '../data/codeExamples'
+import { CensoringVisualizer } from '../components/widgets/CensoringVisualizer'
 
 export default function Ch4() {
   return (
@@ -142,6 +145,8 @@ export default function Ch4() {
         observations), not raw Tobit coefficients, for business interpretation.
       </p>
 
+      <CensoringVisualizer />
+
       <ExpandableReading title="Deep Dive: The Inverse Mills Ratio">
         <p>
           The conditional expectation of a censored normal involves the{' '}
@@ -207,6 +212,9 @@ export default function Ch4() {
         "Tobit coefficients represent effects on the latent variable; always compute and report marginal effects for business interpretation.",
         "When the decision to participate and the magnitude are driven by different factors, consider a Heckman selection model or two-part model instead of Tobit.",
       ]} />
+
+      <h2>Code Example</h2>
+      <CodeBlock python={codeExamples.ch4.python} r={codeExamples.ch4.r} title={codeExamples.ch4.title} />
 
       <QuizSection chapterId="ch4" />
     </ChapterLayout>
